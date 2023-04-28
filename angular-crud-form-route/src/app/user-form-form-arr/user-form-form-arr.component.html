@@ -1,0 +1,84 @@
+<!-- <form [formGroup]="userForm">
+    <div class="name">
+      <label>Name</label> <input type="text" formControlName="name" />
+    </div>
+    <div class="Designation">
+      <label>Designation</label>
+      <select formControlName="designation">
+        <option>SE</option>
+        <option>SSE</option>
+        <option>LE</option>
+        <option>CE</option>
+      </select>
+    </div>
+    <div class="gender">
+      <label>Gender</label>
+      <input
+        type="radio"
+        value="male"
+        name="gender"
+        formControlName="gender"
+      />Male
+      <input
+        type="radio"
+        value="female"
+        name="gender"
+        formControlName="gender"
+      />Female
+    </div> -->
+    <!-- <ng-container *ngFor="let userData of userData"> -->
+    <!-- <div class="skill" *ngFor="let skill of skillSet; let i = index">
+      <label *ngIf="i===0">Skill</label>
+      <input
+        type="checkbox"
+        [value]="skill.value"
+        id="skill"
+        name="skill"
+        [checked]="skill.value === 'Angular'"
+        (change)="onSkillChange($event)"
+      />{{ skill.name }} -->
+    <!-- <input
+        type="checkbox"
+        [value]="Ang"
+        id="skill"
+        name="skill"
+        formControlName="Angular"
+      />Angular -->
+    <!-- </div> -->
+    <!-- </ng-container> -->
+    <!-- <div formArrayName="skills">
+      <div *ngFor="let skill of skills.controls; let i = index">
+        <div [formGroupName]="i">
+          <label>Skill {{ i }}</label>
+          <input type="text" name="skill" formControlName="skill" />
+          <input type="button" value="Remove" (click)="removeSkill(i)" />
+        </div>
+      </div>
+    </div>
+    <input type="button" value="Add" (click)="addSkill()" />
+    <input type="button" value="submit" (click)="saveUser()" />
+  </form>
+  
+  <table border="1">
+    <tr>
+      <th>Id</th>
+      <th>Name</th>
+      <th>Designation</th>
+      <th>Gender</th>
+      <th>Skill</th>
+      <th>Edit</th>
+      <th>Delete</th>
+    </tr>
+    <tr *ngFor="let userData of userData; let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ userData.name }}</td>
+      <td>{{ userData.designation }}</td>
+      <td>{{ userData.gender }}</td>
+      <td>
+        {{ userData.skill }}
+      </td>
+      <td><a (click)="editData(userData, i)">Edit</a></td>
+      <td><a (click)="deleteData(i)">Delete</a></td>
+    </tr>
+  </table> -->
+  

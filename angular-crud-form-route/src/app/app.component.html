@@ -1,0 +1,17 @@
+<ul class="nav nav-tabs">
+  <li class="nav-item">
+    <a class="nav-link" aria-current="page" href="#" [routerLink]="['register']" routerLinkActive="active">Customer Page - Register</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="#" [routerLink]="['view', false]" routerLinkActive="active">Customer Page - View</a>
+  </li>
+</ul>
+
+<!-- <app-user-register></app-user-register>
+
+<app-user-view [userValueData] = "userValue"></app-user-view> -->
+
+<!-- <h1 #contentReg>User register</h1> -->
+<h1 #contentsView> User view</h1>
+
+<router-outlet></router-outlet>

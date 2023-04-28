@@ -1,0 +1,105 @@
+<!-- check last basics html tag view also - in case -->
+ <!-- <input matInput required [formControl]="name"> -->
+ <!-- <mat-error *ngIf="email.errors">Please provide email</mat-error> -->
+<!-- Reactive form-->
+<form class="example-form" [formGroup]="userForm" >
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Enter your name</mat-label>
+        <input matInput required formControlName="name">
+        <mat-error></mat-error>
+      </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Enter your email</mat-label>
+      <input matInput required formControlName="email">
+      <mat-error *ngIf="userForm.get('email')?.errors">Please provide email</mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>Enter your country</mat-label>
+        <input matInput  formControlName="country">
+        <mat-error></mat-error>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Enter your state</mat-label>
+        <input matInput   formControlName="state">
+        <mat-error></mat-error>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Enter your password</mat-label>
+        <input matInput  formControlName="password">
+        <mat-error></mat-error>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Enter your Gender</mat-label>
+        <input matInput   formControlName="gender">
+        <mat-error></mat-error>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Enter your Qualification</mat-label>
+        <input matInput   formControlName="qualification">
+        <mat-error></mat-error>
+      </mat-form-field>
+      <div formArrayName="skills">
+      <mat-form-field class="example-full-width" *ngFor="let skill of skills.controls; let i = index">
+        <div [formGroupName]="i">
+        <mat-label>Enter Skills</mat-label>
+        <input matInput   formControlName="Skills"/>
+        <mat-error></mat-error>
+        <button mat-raised-button color="primary" (click)="removeSkill(i)">Remove Skill</button>
+        </div>
+      </mat-form-field>
+      </div>
+      <section class="example-full-width">
+        <div class="example-button-row">
+            <button mat-raised-button color="primary" (click)="addSkill()">Add Skill</button>
+           
+      <button mat-raised-button color="primary" (click)="submitData()">Submit</button>
+    </div>
+</section>
+   
+</form>
+<!-- <ng-content></ng-content> -->
+
+<!-- template form -->
+ <!-- <mat-error *ngIf="nameVar.invalid">Please enter name</mat-error> -->
+<!-- <form class="example-form" (ngSubmit)="submitData()" #userForm="ngForm">
+    <mat-form-field class="example-full-width" appearance="fill">
+        <mat-label>Enter your name</mat-label>  
+        <input matInput required [(ngModel)]="name" name="name" #nameVar="ngModel">
+        <mat-error *ngIf="nameVar.hasError('required')">Please enter name</mat-error>
+      </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <mat-label>Enter your email</mat-label>
+      <input matInput  >
+      <mat-error>Please provide email</mat-error>
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <mat-label>Enter your country</mat-label>
+        <input matInput  >
+        <mat-error></mat-error>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Enter your state</mat-label>
+        <input matInput   >
+        <mat-error></mat-error>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Enter your password</mat-label>
+        <input matInput  >
+        <mat-error></mat-error>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Enter your Gender</mat-label>
+        <input matInput   >
+        <mat-error></mat-error>
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <mat-label>Enter your Qualification</mat-label>
+        <input matInput   >
+        <mat-error></mat-error>
+      </mat-form-field>
+      <section class="example-full-width">
+        <div class="example-button-row">
+      <input type="submit" mat-raised-button color="primary" [disabled]="!userForm.valid" value="submit">
+    </div>
+</section>
+</form> -->
